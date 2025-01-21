@@ -455,6 +455,7 @@ class CfgVehicles
 	class ItemOptics;
 	class ItemGPS;
 	class Msp_Mattress_Base;
+	class Msp_SleepingBag_Base;
 	class bl_craftable_ex_Kit;
 	class GPSReceiver: ItemGPS
 	{
@@ -557,6 +558,48 @@ class CfgVehicles
 		};
 	};
 	class Msp_Mattress_Blue: Msp_Mattress_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_Green: Msp_SleepingBag_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_Blue: Msp_SleepingBag_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_LimeGreen: Msp_SleepingBag_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_Orange: Msp_SleepingBag_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_Purple: Msp_SleepingBag_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class Msp_SleepingBag_Red: Msp_SleepingBag_Base
 	{
 		inventorySlot[]+=
 		{
