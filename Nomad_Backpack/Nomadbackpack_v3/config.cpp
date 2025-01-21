@@ -244,7 +244,7 @@ class CfgVehicles
 			"Back"
 		};
 		rotationFlags=0;
-		itemSize[]={5,7};
+		itemSize[]={6,7};
 		itemsCargoSize[]={10,10};
 		weight=3000;
 		absorbency=0.2;
@@ -265,7 +265,7 @@ class CfgVehicles
 			"Hatchet",
 			"shoulder",
 			"fishingpole",
-			"mattress",
+			"sleepingbag",
 			"tent"
 		};
 		hiddenSelections[]=
@@ -337,25 +337,26 @@ class CfgVehicles
 		class AnimEvents
 		{
 			class SoundWeapon
-			{
-				class pickUpItem_Light
 				{
-					soundSet="pickUpBackPack_Metal_Light_SoundSet";
-					id=796;
+					class pickUpItem_Light
+					{
+						soundSet="pickUpBackPack_Metal_Light_SoundSet";
+						id=796;
+					};
+					class pickUpItem
+					{
+						soundSet="pickUpBackPack_Metal_SoundSet";
+						id=797;
+					};
+					class drop
+					{
+						soundset="taloonbag_drop_SoundSet";
+						id=898;
+					};
 				};
-				class pickUpItem
-				{
-					soundSet="pickUpBackPack_Metal_SoundSet";
-					id=797;
-				};
-				class drop
-				{
-					soundset="taloonbag_drop_SoundSet";
-					id=898;
-				};
-			};
 		};
 	};
+	
 	class Nomadbackpack_v3_BaseColor: Nomadbackpack_v3_ColorBase
 	{
 		scope=2;
@@ -454,6 +455,7 @@ class CfgVehicles
 	class ItemOptics;
 	class ItemGPS;
 	class Msp_Mattress_Base;
+	class bl_craftable_ex_Kit;
 	class GPSReceiver: ItemGPS
 	{
 		inventorySlot[]+=
@@ -537,28 +539,42 @@ class CfgVehicles
 	{
 		inventorySlot[]+=
 		{
-			"mattress"
+			"sleepingbag"
 		};
 	};
 	class Msp_Mattress_Pink: Msp_Mattress_Base
 	{
 		inventorySlot[]+=
 		{
-			"mattress"
+			"sleepingbag"
 		};
 	};
 	class Msp_Mattress_Yellow: Msp_Mattress_Base
 	{
 		inventorySlot[]+=
 		{
-			"mattress"
+			"sleepingbag"
 		};
 	};
 	class Msp_Mattress_Blue: Msp_Mattress_Base
 	{
 		inventorySlot[]+=
 		{
-			"mattress"
+			"sleepingbag"
+		};
+	};
+	class bl_sleeping_bag_Kit: bl_craftable_ex_Kit
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
+		};
+	};
+	class su_sleeping_bag_packed: Inventory_Base
+	{
+		inventorySlot[]+=
+		{
+			"sleepingbag"
 		};
 	};
 };
@@ -646,6 +662,12 @@ class CfgNonAIVehicles
 		inventorySlot="Hatchet";
 		model="\DZ\weapons\melee\blade\hatchet.p3d";
 	};
+	class ProxySpavnGuns1: ProxyAttachment
+	{
+		scope=2;
+		inventorySlot="Shoulder";
+		model="\Nomad_Backpack\Nomadbackpack_v3\proxys\spavnguns1.p3d";
+	};
 };
 class CfgSlots
 {
@@ -691,10 +713,10 @@ class CfgSlots
 		displayName="Fishing Rod";
 		ghostIcon="";
 	};
-	class Slot_mattress
+	class Slot_sleepingbag
 	{
-		name="mattress";
-		displayName="Mattress";
+		name="sleepingbag";
+		displayName="sleepingbag";
 		ghostIcon="";
 	};
 	class Slot_Hatchet
