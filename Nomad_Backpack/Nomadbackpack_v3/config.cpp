@@ -447,6 +447,15 @@ class CfgVehicles
 			"Nomad_Backpack\Nomadbackpack_v3\data\nomadbackpack_yellow_co.paa"
 		};
 	};
+	class Nomadbackpack_v3_Black: Nomadbackpack_v3_ColorBase
+	{
+		scope=2;
+		descriptionShort="Yellow Nomadbackpack";
+		hiddenSelectionsTextures[]=
+		{
+			"Nomad_Backpack\Nomadbackpack_v3\data\nomadbackpack_black_co.paa"
+		};
+	};
 	class Container_Base;
 	class Clothing_Base;
 	class Transmitter_Base;
