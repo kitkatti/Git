@@ -100,6 +100,8 @@ class CfgVehicles
 		{
 			"\Nomad_Backpack\Nomadbackpack_v3\data\kitsbottle_co.paa"
 		};
+		repairableWithKits[]={5};
+		repairCosts[]={30};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -249,7 +251,7 @@ class CfgVehicles
 		weight=3000;
 		absorbency=0.2;
 		heatIsolation=0.13;
-		repairableWith[]={5,3};
+		repairableWithKits[]={5,3};
 		repairCosts[]={30,25};
 		canBeDigged=1;
 		soundAttType="Outdoor";
